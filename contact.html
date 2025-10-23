@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Francis Portfolio</title>
+  <link rel="stylesheet" href="design/global.css" />
+  <script defer src="back-end/global.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">FRANCIS<span class="dot">.</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- ===== CONTACT INTRO ===== -->
+  <section class="contact-intro fade-up">
+    <div style="padding: 150px 10%; text-align: center;">
+      <h1>Wanna Reach Me Out?</h1>
+      <p style="color: #ccc; max-width: 700px; margin: 20px auto; line-height: 1.8;">
+        Whether you’ve got a project, collab, or just wanna say hi, you can reach me through my socials, phone, or drop a message below. I’ll get back to you as fast as I can.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT CARDS ===== -->
+  <section class="contact-section fade-up">
+    <div class="contact-card" data-link="tel:+639923968622">
+      <h3>📞 Phone</h3>
+      <p>Call or text me directly.</p>
+      <p>+63 992 396 8622</p>
+    </div>
+
+    <div class="contact-card" data-link="https://www.facebook.com/francis.geromo.2025">
+      <h3>📘 Facebook</h3>
+      <p>Send me a message on Facebook.</p>
+      <p>facebook.com/francisfb</p>
+    </div>
+
+    <div class="contact-card" data-link="https://www.tiktok.com/@sky.lance01?_t=ZS-90n417SvewE&_r=1">
+      <h3>🎵 TikTok</h3>
+      <p>Check out my latest videos.</p>
+      <p>@sky.lance01</p>
+    </div>
+
+    <div class="contact-card" data-link="https://www.youtube.com/@sky.lance.xd01">
+      <h3>🎥 YouTube</h3>
+      <p>Subscribe and watch my content.</p>
+      <p>@sky.lance.xd01</p>
+    </div>
+  </section>
+
+  <!-- ===== EMAIL FORM ===== -->
+  <section class="contact-form-section fade-up">
+    <h2>Send Me A Message</h2>
+    <form action="mailto:francisalbertbibatgeromo@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2025 Francis. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Make contact cards clickable
+    document.querySelectorAll('.contact-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const link = card.getAttribute('data-link');
+        if(link) window.open(link, '_blank');
+      });
+    });
+  </script>
+</body>
+</html>

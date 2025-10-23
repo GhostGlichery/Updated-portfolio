@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Francis Portfolio</title>
+  <link rel="stylesheet" href="design/global.css" />
+  <script defer src="back-end/global.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+  <header class="navbar">
+    <div class="logo">FRANCIS<span class="dot">.</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="hero-section static-hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 class="fade-up">My Work & Creations</h1>
+      <p class="fade-up delay-1">
+        A showcase of my <strong>video editing, design</strong>, and <strong>front-end projects</strong>... all with a dark, cinematic vibe.
+      </p>
+      <div class="fade-up delay-2">
+        <a href="contact.html" class="btn">Hire Me</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <div class="portfolio-card fade-up" data-link="https://yourlink.com/project1">
+      <img src="images/c7c099e2f438b0a7246e459df67aa6d1_0.jpeg" alt="Project 1">
+      <div class="card-content">
+        <h3>Yikes! - IIwlds</h3>
+        <p>Song cover for IIwlds</p>
+      </div>
+    </div>
+
+    <div class="portfolio-card fade-up delay-1" data-link="https://yourlink.com/project2">
+      <img src="images/Untitled4_20251004215424.png" alt="Project 2">
+      <div class="card-content">
+        <h3>Poster for The Sun Vanished</h3>
+        <p>A rushed poster from @TheTeller for his Story telling</p>
+      </div>
+    </div>
+
+    <div class="portfolio-card fade-up delay-2" data-link="https://yourlink.com/project3">
+      <img src="images/sweater_weather.jpg" alt="Project 3">
+      <div class="card-content">
+        <h3>Typography Edit</h3>
+        <p>Moving lyrics (rushed for 3 hours)</p>
+      </div>
+    </div>
+
+    <div class="portfolio-card fade-up delay-3" data-link="https://www.tiktok.com/@the.fictional.reality/video/7561509850992217352?_r=1&u_code=emj8eij84el53l&region=PH&mid=7561509914654034705&preview_pb=0&sharer_language=en&_d=ejjej48demc9d2&share_item_id=7561509850992217352&source=h5_t&timestamp=1761227117&user_id=7557092293745951762&sec_user_id=MS4wLjABAAAAH4akzxd1LgG1ltnN-46RKkjn6dzNMcqI0F8psO6EiRpaU_XMz-MzpNDDq43q0ec_&social_share_type=0&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7510661254647023378&share_link_id=0ab2c393-81e2-4c67-86ce-68482a84ec1c&share_app_id=1180&ugbiz_name=MAIN&ug_btm=b8727%2Cb2878&link_reflow_popup_iteration_sharer=%7B%22click_empty_to_play%22%3A1%2C%22dynamic_cover%22%3A1%2C%22follow_to_play_duration%22%3A-1.0%2C%22profile_clickable%22%3A1%7D&enable_checksum=1">
+      <img src="images/anaolg_horror.jpg" alt="Project 4">
+      <div class="card-content">
+        <h3>Analog Horror with SFX</h3>
+        <p>Analog Horror/story telling with various sound effects (rushed for almost 3 hours)</p>
+      </div>
+    </div>
+
+    <div class="portfolio-card fade-up delay-4" data-link="https://yourlink.com/project5">
+      <img src="images/polarbear.png" alt="Project 5">
+      <div class="card-content">
+        <h3>Polar Bear T-shirt design</h3>
+        <p>Product from OJT</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="cta fade-up delay-2">
+    <h2>Let’s Build Something Epic Together</h2>
+    <p>From cinematic videos to modern front-end sites... I’ll bring your vision to life.</p>
+    <a href="contact.html" class="btn">Work With Me</a>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Francis. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Make portfolio cards clickable
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const link = card.getAttribute('data-link');
+        if(link) window.open(link, '_blank');
+      });
+    });
+  </script>
+</body>
+</html>

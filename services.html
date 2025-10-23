@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Francis</title>
+  <link rel="stylesheet" href="design/global.css" />
+  <link rel="stylesheet" href="design/services.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar fade-up">
+    <div class="logo">FRANCIS<span class="dot">.</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-btn">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services fade-up">
+    <div class="section-header fade-up">
+      <h1>My Services</h1>
+      <p>Professional visuals, logos, and digital creations... tailored for your needs.</p>
+    </div>
+
+    <div class="service-row fade-up delay-1">
+      <div class="service-text">
+        <h3>🎬 Video Editing</h3>
+        <p>I craft aesthetic, cinematic, typography, and ad-style edits for brands, students, and creators.</p>
+        <button class="btn service-btn" data-service="Video Editing">I’m Interested</button>
+      </div>
+    </div>
+
+    <div class="service-row fade-up delay-2 reverse">
+      <div class="service-text">
+        <h3>🎨 Logo Design</h3>
+        <p>Clean, modern, and custom-made logos that capture your style or brand’s identity.</p>
+        <button class="btn service-btn" data-service="Logo Design">I’m Interested</button>
+      </div>
+    </div>
+
+    <div class="service-row fade-up delay-3">
+      <div class="service-text">
+        <h3>🖼️ Poster Design</h3>
+        <p>From sleek minimal designs to vibrant promotional posters... I design visuals that pop.</p>
+        <button class="btn service-btn" data-service="Poster Design">I’m Interested</button>
+      </div>
+    </div>
+
+    <div class="service-row fade-up delay-4 reverse">
+      <div class="service-text">
+        <h3>💻 Web & Basic App</h3>
+        <p>Responsive front-end websites and simple Android applications... I don’t handle servers, but can integrate if you have one.</p>
+        <button class="btn service-btn" data-service="Web & Basic App">I’m Interested</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STUDENT NOTE ===== -->
+  <section class="student-note fade-up">
+    <p>🎓 Are you a student? My prices are negotiable — just mention it in your message!</p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer fade-up">
+    <p>© 2025 Francis. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ===== EMAIL BUTTON SCRIPT ===== -->
+  <script>
+    const email = "francisalbertbibatgeromo@gmail.com";
+
+    document.querySelectorAll('.service-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const service = btn.dataset.service;
+        const subject = encodeURIComponent(`Inquiry: ${service}`);
+        const body = encodeURIComponent(`Hi Francis,\n\nI'm interested in your ${service} service and would like to know more details.\n\nThank you!`);
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+      });
+    });
+  </script>
+
+  <script src="back-end/global.js"></script>
+</body>
+</html>
